@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function show(data) {
+			console.log(data);
+		}
+
+		var styles = ['Джаз', 'Блюз'];
+		styles.push('Рок-н-Ролл'); // Добавили в кінець значення «Рок-н-Ролл»
+		styles.splice(-2, 1, 'Класика'); // Замінили передостаннє значення на «Класика»
+		stylesDeleted = styles.splice(0, 1); // Видалили перше значення масиву і зберіг його, адже потім нам потрібно буде його використати
+		show(stylesDeleted); // Виводимо видалене значення
+		styles.splice(0, 0, 'Реп', 'Реггі'); // Добавили в початок значення «Реп» і «Реггі»
+		show(styles);
+	</script>
+</body>
+</html>

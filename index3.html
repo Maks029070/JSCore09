@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function show(data) {
+			console.log(data);
+		}
+
+		function find(arr, value) {
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] == value) {
+					show("Співпадіння знайдено під номером: " + i);
+					return i;
+				}
+			}
+
+			show("Співпадінь не знайдено")
+			return 0;
+		}
+
+		var Array1 = [1, 2, 3, 4, 5, 6, 'Hello', 'Car', 12.225, 77.5];
+		find(Array1, 12.225);
+		find(Array1, 4);
+		find(Array1, 55);
+		find(Array1, 'Hello');
+		find(Array1, 'Good');
+	</script>
+</body>
+</html>

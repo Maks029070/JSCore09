@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function show(data) {
+			console.log(data);
+		}
+
+		function camelize(str) {
+			array = str.split('-'); // Розбиваємо наш рядок на масив, у якому кожне слово буде елементом масиву
+
+			for (var i = 0; i < array.length; i++) {
+				array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1); // Для початку беремо першу літеру і підносимо її до верхнього регістру, а потім додаємо іншу частину рядку уже без першої літери. В результаті маємо те саме слово, але тепер з великої літери
+			}
+
+			return array.join(''); // З`єднуємо наш масив у один новий рядок без будь-яких пропусків і символів
+		}
+
+		show(camelize('my-short-string'));
+		show(camelize('my-name-is-maksym'));
+		show(camelize('hello-world!'));
+
+	</script>
+</body>
+</html>
